@@ -1,7 +1,7 @@
 input_content = open("./input.txt", "r").readlines()
 output = open("./1.generated.ts", "w")
 
-output.write('import { Pipes, Sum } from "./1"\n\n')
+output.write('import { Pipes, Add } from "./1"\n\n')
 
 def chunks(list, n):
     for i in range(0, len(list), n):
@@ -17,7 +17,7 @@ for lines in chunks(input_content, 30):
 output.write("type Result = ")
 
 for i in range(total_chunks):
-    output.write(f"Sum<ResultChunk{i}, ")
+    output.write(f"Add<ResultChunk{i}, ")
 
 output.write("0") # trailing comma is not allowed
 output.write(">" * (total_chunks))

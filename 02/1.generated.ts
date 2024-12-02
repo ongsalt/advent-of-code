@@ -1,4 +1,4 @@
-import { Pipes, Sum } from "./1"
+import { Pipes, Add } from "./1"
 
 type InputChunk0 = `22 25 27 28 30 31 32 29
 72 74 75 77 80 81 81
@@ -1068,4 +1068,4 @@ type InputChunk33 = `34 31 30 29 28
 93 91 90 89 86 85 82 80`
 type ResultChunk33 = Pipes<InputChunk33>
 
-type Result = Sum<ResultChunk0, Sum<ResultChunk1, Sum<ResultChunk2, Sum<ResultChunk3, Sum<ResultChunk4, Sum<ResultChunk5, Sum<ResultChunk6, Sum<ResultChunk7, Sum<ResultChunk8, Sum<ResultChunk9, Sum<ResultChunk10, Sum<ResultChunk11, Sum<ResultChunk12, Sum<ResultChunk13, Sum<ResultChunk14, Sum<ResultChunk15, Sum<ResultChunk16, Sum<ResultChunk17, Sum<ResultChunk18, Sum<ResultChunk19, Sum<ResultChunk20, Sum<ResultChunk21, Sum<ResultChunk22, Sum<ResultChunk23, Sum<ResultChunk24, Sum<ResultChunk25, Sum<ResultChunk26, Sum<ResultChunk27, Sum<ResultChunk28, Sum<ResultChunk29, Sum<ResultChunk30, Sum<ResultChunk31, Sum<ResultChunk32, Sum<ResultChunk33, 0>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+type Result = Add<ResultChunk0, Add<ResultChunk1, Add<ResultChunk2, Add<ResultChunk3, Add<ResultChunk4, Add<ResultChunk5, Add<ResultChunk6, Add<ResultChunk7, Add<ResultChunk8, Add<ResultChunk9, Add<ResultChunk10, Add<ResultChunk11, Add<ResultChunk12, Add<ResultChunk13, Add<ResultChunk14, Add<ResultChunk15, Add<ResultChunk16, Add<ResultChunk17, Add<ResultChunk18, Add<ResultChunk19, Add<ResultChunk20, Add<ResultChunk21, Add<ResultChunk22, Add<ResultChunk23, Add<ResultChunk24, Add<ResultChunk25, Add<ResultChunk26, Add<ResultChunk27, Add<ResultChunk28, Add<ResultChunk29, Add<ResultChunk30, Add<ResultChunk31, Add<ResultChunk32, Add<ResultChunk33, 0>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

@@ -11,12 +11,10 @@ type Or<Lhs extends boolean, Rhs extends boolean> = Lhs extends false
 // Math
 type CreateRange<N extends number, Temp extends number[] = []> = Temp["length"] extends N ? Temp : CreateRange<N, [0, ...Temp]>
 
-type Add<Lhs extends number, Rhs extends number> = [
+export type Add<Lhs extends number, Rhs extends number> = [
     ...CreateRange<Lhs>,
     ...CreateRange<Rhs>
 ]["length"]
-
-export type Sum<Lhs extends number, Rhs extends number = 0> = Add<Lhs, Rhs>
 
 // export type Sum<Input extends number[]> = 
 //     Input extends [infer It extends number, ...infer Rest extends number[]]
