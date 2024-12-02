@@ -1,7 +1,11 @@
-input_content = open("./input.txt", "r").readlines()
-output = open("./1.generated.ts", "w")
+# target = input("Which file (1 or 2): ")
+target = "2"
 
-output.write('import { Pipes, Add } from "./1"\n\n')
+input_content = open("./input.txt", "r").readlines()
+output = open(f"./{target}.generated.ts", "w")
+
+output.write('import { Add } from "./1"\n')
+output.write('import { Pipes } from "./' + target + '"\n\n')
 
 def chunks(list, n):
     for i in range(0, len(list), n):

@@ -1,5 +1,5 @@
 import { Add } from "./1"
-import { Pipes } from "./1"
+import { Pipes } from "./2"
 
 type InputChunk0 = `22 25 27 28 30 31 32 29
 72 74 75 77 80 81 81
