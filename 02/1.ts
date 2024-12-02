@@ -1,5 +1,3 @@
-import { FullInput, OneThirdInput } from "./input.1"
-
 type And<Lhs extends boolean, Rhs extends boolean> = Lhs extends true
     ? Rhs
     : false
@@ -13,10 +11,17 @@ type Or<Lhs extends boolean, Rhs extends boolean> = Lhs extends false
 // Math
 type CreateRange<N extends number, Temp extends number[] = []> = Temp["length"] extends N ? Temp : CreateRange<N, [0, ...Temp]>
 
-// type Add<Lhs extends number, Rhs extends number> = [
-//     ...CreateRange<Lhs>,
-//     ...CreateRange<Rhs>
-// ]["length"]
+type Add<Lhs extends number, Rhs extends number> = [
+    ...CreateRange<Lhs>,
+    ...CreateRange<Rhs>
+]["length"]
+
+export type Sum<Lhs extends number, Rhs extends number = 0> = Add<Lhs, Rhs>
+
+// export type Sum<Input extends number[]> = 
+//     Input extends [infer It extends number, ...infer Rest extends number[]]
+//         ? Add<It, Sum<Rest>>
+//         : 0
 
 type IsMoreThan<Lhs extends number, Rhs extends number> = 
     CreateRange<Lhs> extends CreateRange<Rhs> // Lhs <= Rhs
@@ -66,7 +71,9 @@ type IsSafe<Input extends number[]> = Or<
 // Split by line
 type Pipe1<Input extends string[]> =
     Input extends [infer It extends string, ...infer Rest extends string[]] // I think this is too verbose. maybe there is a better way to do this 
-        ? [Split<It, " ">, ...Pipe1<Rest>]
+        ? It extends ""
+            ? []
+            : [Split<It, " ">, ...Pipe1<Rest>]
         : []
 
 // Map to string
@@ -100,16 +107,12 @@ type ExampleInput = `7 6 4 2 1
 9 7 6 2 1
 1 3 2 4 5
 8 6 4 4 1
-1 3 6 7 9`
+1 3 6 7 9
+`
 
-type Result2 = Pipe2<Pipe1<Split<ExampleInput, "\n">>>
+type Result1 = Pipe1<Split<ExampleInput, "\n">>
+type Result2 = Pipe2<Result1>
 type Result3 = Pipe3<Result2>
 type Result4 = Pipe4<Result3>
 
 export type Pipes<Input extends string> = Pipe4<Pipe3<Pipe2<Pipe1<Split<Input, "\n">>>>>
-
-
-// Bruh ts lsp refuse to do this because too much recursion 
-type FullResult = Pipes<FullInput>
-
-
