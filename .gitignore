@@ -1,2 +1,3 @@
 *.generated.ts
 input.txt
+node_modules
