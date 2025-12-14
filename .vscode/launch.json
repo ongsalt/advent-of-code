@@ -37,6 +37,26 @@
             "target": "06",
             "configuration": "release",
             "preLaunchTask": "swift: Build Release 06 (2025\\06)"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:advent-of-code-2024}/2025\\05\\avc",
+            "name": "Debug avc (2025\\05\\avc)",
+            "target": "avc",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug avc (2025\\05\\avc)"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:advent-of-code-2024}/2025\\05\\avc",
+            "name": "Release avc (2025\\05\\avc)",
+            "target": "avc",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release avc (2025\\05\\avc)"
         }
     ]
 }
