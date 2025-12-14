@@ -17,6 +17,26 @@
             "name": "Release 08 (2024\\08)",
             "program": "${workspaceFolder:advent-of-code-2024}/2024\\08/.build/release/08",
             "preLaunchTask": "swift: Build Release 08 (2024\\08)"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:advent-of-code-2024}/2025\\06",
+            "name": "Debug 06 (2025\\06)",
+            "target": "06",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug 06 (2025\\06)"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:advent-of-code-2024}/2025\\06",
+            "name": "Release 06 (2025\\06)",
+            "target": "06",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release 06 (2025\\06)"
         }
     ]
 }
