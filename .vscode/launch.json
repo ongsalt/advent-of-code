@@ -1,22 +1,24 @@
 {
     "configurations": [
         {
-            "type": "lldb",
+            "type": "swift",
             "request": "launch",
             "args": [],
             "cwd": "${workspaceFolder:advent-of-code-2024}/2024\\08",
             "name": "Debug 08 (2024\\08)",
-            "program": "${workspaceFolder:advent-of-code-2024}/2024\\08/.build/debug/08",
-            "preLaunchTask": "swift: Build Debug 08 (2024\\08)"
+            "preLaunchTask": "swift: Build Debug 08 (2024\\08)",
+            "target": "08",
+            "configuration": "debug"
         },
         {
-            "type": "lldb",
+            "type": "swift",
             "request": "launch",
             "args": [],
             "cwd": "${workspaceFolder:advent-of-code-2024}/2024\\08",
             "name": "Release 08 (2024\\08)",
-            "program": "${workspaceFolder:advent-of-code-2024}/2024\\08/.build/release/08",
-            "preLaunchTask": "swift: Build Release 08 (2024\\08)"
+            "preLaunchTask": "swift: Build Release 08 (2024\\08)",
+            "target": "08",
+            "configuration": "release"
         },
         {
             "type": "swift",
@@ -57,6 +59,46 @@
             "target": "avc",
             "configuration": "release",
             "preLaunchTask": "swift: Build Release avc (2025\\05\\avc)"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:advent-of-code-2024}/2025\\07",
+            "name": "Debug 07 (2025\\07)",
+            "target": "07",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug 07 (2025\\07)"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:advent-of-code-2024}/2025\\07",
+            "name": "Release 07 (2025\\07)",
+            "target": "07",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release 07 (2025\\07)"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:advent-of-code-2024}/2025\\08-swift",
+            "name": "Debug 08 (2025\\08-swift)",
+            "target": "08",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug 08 (2025\\08-swift)"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:advent-of-code-2024}/2025\\08-swift",
+            "name": "Release 08 (2025\\08-swift)",
+            "target": "08",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release 08 (2025\\08-swift)"
         }
     ]
 }
