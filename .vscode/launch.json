@@ -99,6 +99,26 @@
             "target": "08",
             "configuration": "release",
             "preLaunchTask": "swift: Build Release 08 (2025\\08-swift)"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:advent-of-code-2024}/2025\\09",
+            "name": "Debug 09 (2025\\09)",
+            "target": "09",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug 09 (2025\\09)"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:advent-of-code-2024}/2025\\09",
+            "name": "Release 09 (2025\\09)",
+            "target": "09",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release 09 (2025\\09)"
         }
     ]
 }
